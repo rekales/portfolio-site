@@ -1,0 +1,55 @@
+.main-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0px;
+  overflow: hidden;
+
+  border: 1px;
+  border-color: white;
+  border-style: solid;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-icons * {
+  margin: 0px;
+}
+
+.main-icons img {
+  width: auto;
+  height: 100px;
+}
+
+.main-icons-text {
+  max-width: 0;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.main-icons:hover .main-icons-text {
+  max-width: 490px;
+  opacity: 1;
+}
+
+.main-icons-text h2 {
+  font-size: 75px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: .75;
+}
+
+.main-icons-text h3 {
+  font-size: 20px;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1;
+  text-align: right;
+}
