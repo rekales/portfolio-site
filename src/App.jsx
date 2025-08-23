@@ -9,11 +9,21 @@ import { useState } from "react";
 import "./App.css"
 
 import Header from "./Header.jsx"
+import TitleName from "./TitleName.jsx";
 
 function App() {
   return(
     <>
       <Header/>
+      <div className="content">
+        <div className="centered-content">
+          <TitleName/>
+        </div>
+        <div className="projects-button">
+          <h3 className="jumper1">▲</h3>
+          <h3 className="jumper2">Projects</h3>
+        </div>
+      </div>
     </>
   );
 }
