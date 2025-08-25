@@ -5,27 +5,45 @@
 // Todo: redo icons
 // Todo: Use SVG graphics for logos
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import "./App.css"
 
 import Header from "./Header.jsx"
-import TitleName from "./TitleName.jsx";
+import Home from "./Home.jsx";
+import Projects from "./Projects.jsx";
+import { div } from "framer-motion/client";
 
 function App() {
   return(
-    <>
+    <Router>
       <Header/>
       <div className="content">
-        <div className="centered-content">
-          <TitleName/>
-        </div>
-        <div className="projects-button">
-          <h3 className="jumper1">▲</h3>
-          <h3 className="jumper2">Projects</h3>
-        </div>
+        <AnimatedRoutes/>
       </div>
-    </>
+    </Router>
   );
 }
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  const [isFirstLoad, setIsFirstLoad] = useState(true);
+
+  useEffect(() => {
+    setIsFirstLoad(false);
+  }, []);
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/projects" element={<Projects skipAnimation={isFirstLoad}/>}/>
+      </Routes>
+    </AnimatePresence>
+  )
+}
+
+
 
 export default App

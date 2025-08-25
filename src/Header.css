@@ -8,6 +8,12 @@
     padding-top: 16px;
 }
 
+.header-home-button {
+    display: flex;
+    align-items: center;
+
+}
+
 .header-logo {
     max-height: 48px;
     width: auto;
@@ -27,7 +33,6 @@
 .header-link-container {
     display: flex;
     align-items: center;
-    cursor: pointer;
 }
 
 .header-link-text {
