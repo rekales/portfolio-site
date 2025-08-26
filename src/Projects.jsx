@@ -70,7 +70,7 @@ function Projects ({skipAnimation = false}) {
   return (
     <div className="projects-content">
       <motion.div
-      className="projects-container"
+      className="projects-name-container"
       initial={skipAnimation ? false : { x: "-100%", opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: "-100%", opacity: 0 }}
@@ -111,8 +111,22 @@ function Projects ({skipAnimation = false}) {
           </ul>
         </div>
       </motion.div>
-      <div className="project-description">
-          john
+      <div className="projects-description-container">
+          <div className="projects-description-box">
+              <svg className="top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path style={{stroke:"#ffffff",strokeWidth:6,strokeLinecap:"square"}}
+                  d="M0 100V0m0 0h100"
+                />
+              </svg>
+              <svg className="bottom-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <path style={{stroke:"#ffffff",strokeWidth:6,strokeLinecap:"square"}}
+                  d="M0 100h100m0 0V0"
+                />
+              </svg>
+              <div className="projects-description-markdown">
+                john
+              </div>
+          </div>
       </div>
     </div>
   );

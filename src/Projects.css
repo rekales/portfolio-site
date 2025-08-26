@@ -1,17 +1,50 @@
 .projects-content {
     display: flex;
+    width: 100%;
 }
 
-.projects-container {
+.projects-name-container {
     display: flex;
     flex-direction: column;
-    margin-left: 96px;
-    margin-top: 32px;
+    padding-left: 96px;
+    padding-top: 32px;
 }
 
-.projects-description {
-    width: auto;
+.projects-description-container {
+    display: flex;
     flex: 1;
+    padding: 64px;
+}
+
+.projects-description-box {
+    flex: 1;
+    position: relative;
+    display: flex;
+}
+
+.projects-description-box > svg {
+    width: 100px;
+    height: 100px;
+    opacity: 0.9;
+}
+
+svg.top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+svg.bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.projects-description-markdown {
+    flex: 1;
+    margin: 16px;
 }
 
 .projects-header {
