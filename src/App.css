@@ -1,0 +1,12 @@
+html, body {
+    overflow: hidden
+}
+
+.content {
+    display: flex;
+    position: absolute;
+    top: 104px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
