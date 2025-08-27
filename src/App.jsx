@@ -34,11 +34,14 @@ function AnimatedRoutes() {
     setIsFirstLoad(false);
   }, []);
 
+  const topLevelKey = location.pathname.startsWith("/projects")
+       ? "projects" : location.pathname;
+
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
+      <Routes location={location} key={topLevelKey}>
         <Route path="/" element={<Home/>}/>
-        <Route path="/projects" element={<Projects skipAnimation={isFirstLoad}/>}/>
+        <Route path="/projects/*" element={<Projects skipAnimation={isFirstLoad}/>}/>
       </Routes>
     </AnimatePresence>
   )

@@ -1,0 +1,151 @@
+.projects-description-markdown-container {
+  line-height: 1.2;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.projects-description-markdown-container > * {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.projects-description-markdown-container > :first-child {
+  margin-top: 0em;
+}
+
+/* Headings */
+.projects-description-markdown-container h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.projects-description-markdown-container h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.projects-description-markdown-container h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.projects-description-markdown-container h4 {
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
+.projects-description-markdown-container h5,
+.projects-description-markdown-container h6 {
+  font-weight: 600;
+}
+
+/* Paragraphs */
+.projects-description-markdown-container p {
+  font-size: 1em;
+}
+
+/* Text formatting */
+.projects-description-markdown-container strong {
+  font-weight: 600;
+}
+
+.projects-description-markdown-container em {
+  font-style: italic;
+}
+
+.projects-description-markdown-container del {
+  text-decoration: line-through;
+}
+
+.projects-description-markdown-container code {
+  background-color: #f5f5f5;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-family: monospace;
+  font-size: 0.95em;
+}
+
+/* Links */
+.projects-description-markdown-container a {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+/* Blockquote */
+.projects-description-markdown-container blockquote {
+  border-left: 4px solid #ddd;
+  padding-left: 12px;
+  color: #ffffffcc;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+/* Lists */
+.projects-description-markdown-container ul,
+.projects-description-markdown-container ol {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  padding: 0;
+}
+
+.projects-description-markdown-container li {
+  /* margin-top: 0.25em; */
+  margin-bottom: 0.25em;
+}
+
+/* Nested lists */
+.projects-description-markdown-container ul ul,
+.projects-description-markdown-container ol ol {
+  margin-left: 1em;
+}
+
+/* Tables */
+.projects-description-markdown-container table {
+  border-collapse: collapse;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.projects-description-markdown-container th,
+.projects-description-markdown-container td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+.projects-description-markdown-container th {
+  background-color: #f2f2f2;
+}
+
+/* Images */
+.projects-description-markdown-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+/* Horizontal rule */
+.projects-description-markdown-container hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2em 0;
+}
+
+/* Preformatted code blocks */
+.projects-description-markdown-container pre {
+  background-color: #f5f5f5;
+  padding: 12px;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 1em 0;
+}
+
+.projects-description-markdown-container pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.95em;
+}

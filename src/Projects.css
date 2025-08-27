@@ -42,9 +42,11 @@ svg.bottom-right {
     z-index: 10;
 }
 
-.projects-description-markdown {
+.projects-description-markdown-container {
     flex: 1;
-    margin: 16px;
+    padding: 32px;
+    margin: 8px;
+    overflow: scroll;
 }
 
 .projects-header {

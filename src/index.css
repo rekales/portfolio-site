@@ -14,15 +14,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 400;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
@@ -55,7 +46,7 @@ h2 {
   }
 }
 
-button {
+button, a{
   all: unset;
   cursor: pointer;
 }

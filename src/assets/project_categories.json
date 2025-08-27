@@ -1,0 +1,51 @@
+{
+  "minecraft": {
+    "category": "Minecraft",
+    "subtext": "Mod Development",
+    "icon": "/icons/mmc_logo.png",
+    "content" : "/markdown/minecraft/overview.md",
+    "projects": {
+      "cmlinkedremote": {"name": "Create More: Linked Remote", "content": "/markdown/minecraft/cmlinkedremote.md"},
+      "cmparallelpipes": {"name": "Create More: Parallel Pipes", "content": ""},
+      "cmpackagepipebombs": {"name": "Create More: Package Pipebombs", "content": ""},
+      "cmpackagecouriers": {"name": "Create More: Package Couriers", "content": ""}
+    }
+  },
+  "factorio": {
+    "category": "Factorio",
+    "subtext": "Mod Development",
+    "icon": "/icons/factorio_logo.png",
+    "projects": {
+      "spoilagescanner": {"name": "Spoilage Scanner", "content": ""},
+      "agrinospoil": {"name": "Agri No Spoil", "content": ""},
+      "firestarter": {"name": "Fire Starter", "content": ""},
+      "sestuff": {"name": "Space Exploration Stuff", "content": ""}
+    }
+  },    
+  "rimworld": {
+    "category": "RimWorld",
+    "subtext": "Mod Development",
+    "icon": "/icons/rimworld_logo.png",
+    "projects": {
+      "tasks": {"name": "Tasks - General Automation Tool", "content": ""},
+      "rimscript": {"name": "RimScript", "content": ""}
+    }
+  },    
+  "unity": {
+    "category": "Unity",
+    "subtext": "Game Dev",
+    "icon": "/icons/unity_logo.png",
+    "projects": {
+      "cmlinkedremote": {"name": "JARTS", "content": ""}
+    }
+  },    
+  "mechatronics": {
+    "category": "Mechatronics",
+    "subtext": "Logs & Designs",
+    "icon": "/icons/mechatronics_logo.png",
+    "projects": {
+      "bionichand": {"name": "Bionic Hand", "content": ""},
+      "cflactuator": {"name": "Constant Force Linear Actuator", "content": ""}
+    }
+  }
+}
