@@ -16,10 +16,8 @@ function Projects ({skipAnimation = false}) {
   const location = useLocation();
   const paths = location.pathname.split("/").filter(Boolean);
 
-  // Todo: remove state because url is the state
   const [descriptionFile, setDescriptionFile] = useState("/markdown/projects_intro.md")
   const [descriptionContent, setDescriptionContent] = useState("")
-
 
   useEffect(() => {
   if (!descriptionFile) return;

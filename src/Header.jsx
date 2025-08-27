@@ -2,15 +2,13 @@
 import { useNavigate } from "react-router-dom";
 import "./Header.css"
 
-import Logo from "./assets/logo v2.png"
-
 function Header() {
   const navigate = useNavigate();
 
   return(
     <div className="header">
       <button className="header-home-button" onClick={() => navigate("/")}>
-        <img className="header-logo" src={Logo} alt="" />
+        <img className="header-logo" src="/logo_v2.png" alt="" />
         <h2 className="header-text">Krei</h2>
       </button>
 
