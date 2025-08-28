@@ -1,7 +1,8 @@
 .projects-description-markdown-container {
-  line-height: 1.2;
+  line-height: 1.25;
   font-size: 20px;
   font-weight: 400;
+  opacity: 0.95;
 }
 
 .projects-description-markdown-container > * {
@@ -96,6 +97,10 @@
   margin-bottom: 0.25em;
 }
 
+.projects-description-markdown-container li p {
+  margin: 0em;
+}
+
 /* Nested lists */
 .projects-description-markdown-container ul ul,
 .projects-description-markdown-container ol ol {
@@ -122,10 +127,12 @@
 
 /* Images */
 .projects-description-markdown-container img {
-  max-width: 100%;
+  max-width: 30%;
   height: auto;
   display: block;
-  margin: 1em auto;
+  border-radius: 5%;
+  margin: 1em;
+  margin-left: 2em;
 }
 
 /* Horizontal rule */

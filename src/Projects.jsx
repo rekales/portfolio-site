@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 import "./Projects.css"
 import "./ProjectsMarkdown.css"
@@ -27,7 +28,19 @@ function Projects ({skipAnimation = false}) {
   }, [descriptionFile]);
 
   useEffect(() => {
-    if (paths[0] == "projects" && paths[1] && paths[1] in ProjectsCategories) {
+    if (paths[0] == "projects") {
+      if (paths[1] && paths[1] in ProjectsCategories) {
+          const projects = ProjectsCategories[paths[1]].projects
+        if (paths[2] && paths[2] in projects)
+          setDescriptionFile(projects[paths[2]].content)
+        else 
+          setDescriptionFile(ProjectsCategories[paths[1]].content)
+      } else {
+        setDescriptionFile("/markdown/projects_intro.md")
+      }
+    }
+
+    if (paths[1] && paths[1] in ProjectsCategories) {
         const projects = ProjectsCategories[paths[1]].projects
       if (paths[2] && paths[2] in projects)
         setDescriptionFile(projects[paths[2]].content)
@@ -96,7 +109,7 @@ function Projects ({skipAnimation = false}) {
                 />
               </svg>
               <div className="projects-description-markdown-container">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>{descriptionContent}</ReactMarkdown>;
+                <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{descriptionContent}</ReactMarkdown>
               </div>
           </div>
       </div>

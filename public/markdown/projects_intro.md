@@ -1,70 +1,9 @@
-typical paragraph  
-and new line
+# Projects Overview
 
-another paragraph
+Here is the list of my projects grouped by category. I did not include school projects, easy made-on-a-whim side projects, and classified corporate proprietary projects for obvious reasons. 
 
-# H1
+I make these projects because they don't exist anywhere and there a demand for it, or perhaps latent demand. These are made for fun, or an excuse/reason to learn, or due to my innate desire to innovate as an engineer.
 
-## H2
+**Some of these may be highly detailed with previews like in the mechatronics category, and some are just short descriptions.**
 
-### H3
-
-#### H4
-
-**bold text**  
-
-*italicized text*  
-
-> blockquote  
-
-1. First ordered list item
-2. Second ordered list item
-3. Third ordered list item
-
-- First unordered list item
-- Second unordered list item
-- Third unordered list item
-
-### -Horizontal Rule
-
----
-
-### - Link
-
-[Markdown Guide](https://www.markdownguide.org)
-
-### - Image
-
-![alt text](https://www.markdownguide.org/assets/images/tux.png)
-
-## - Extended Syntax
-
-| Table Header 1 | Table Header 1 |
-| -------------- | -------------- |
-| Cell 1,1 | Cell 2,1 |
-| Cell 1,2 | Cell 2,2 |
-
-Here's a sentence with a footnote. [^1]
-
-[^1]: This is the footnote.
-
-#### My Great Heading {#custom-id}
-
-term
-: definition
-
-~~strikethrough~~
-
-- [x] First task
-- [ ] Second task
-- [ ] Third task
-
-Joy Emoji -> ! :joy:
-
-(See also [Copying and Pasting Emoji](https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji))
-
-text with ==highlight== word
-
-text with ~subscript~ word
-
-text with ^superscript^ word
+All my projects are open-source and available for free for everyone.
