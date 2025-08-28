@@ -12,6 +12,17 @@
   margin-bottom: 0.5em;
 }
 
+a > img.link-badge {
+  max-width: initial;
+  height: 20px;
+  width: auto;
+  margin: 0px 4px 0px 4px;
+}
+
+*:has(+ .link-badge-container) {
+  margin-bottom: 10px;
+}
+
 .projects-description-markdown-container > :first-child {
   margin-top: 0em;
 }

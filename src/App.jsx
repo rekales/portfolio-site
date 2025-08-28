@@ -21,8 +21,8 @@ function App() {
       <Header/>
       <div className="content">
         <AnimatedRoutes/>
-        <p className="footer">2025© Krei's Shitass Portfolio</p>
       </div>
+      <p className="footer">2025© Krei's Shitass Portfolio</p>
     </Router>
   );
 }

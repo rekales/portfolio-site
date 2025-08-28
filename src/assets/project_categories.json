@@ -7,7 +7,7 @@
     "projects": {
       "cmlinkedremote": {"name": "Create More: Linked Remote", "content": "/markdown/minecraft/cmlinkedremote.md"},
       "cmparallelpipes": {"name": "Create More: Parallel Pipes", "content": "/markdown/minecraft/cmparallelpipes.md"},
-      "cmpackagepipebombs": {"name": "Create More: Package Pipebombs", "content": "/markdown/minecraft/cmpackagepipebombs.md"},
+      "cmpackagepipebombs": {"name": "Create More: Pipe Bombs in Packages", "content": "/markdown/minecraft/cmpackagepipebombs.md"},
       "cmpackagecouriers": {"name": "Create More: Package Couriers", "content": "/markdown/minecraft/cmpackagecouriers.md"}
     }
   },
