@@ -2,55 +2,55 @@
   "minecraft": {
     "category": "Minecraft",
     "subtext": "Mod Development",
-    "icon": "/icons/mmc_logo.png",
-    "content" : "/markdown/minecraft/overview.md",
+    "icon": "icons/mmc_logo.png",
+    "content" : "markdown/minecraft/overview.md",
     "projects": {
-      "cmlinkedremote": {"name": "Create More: Linked Remote", "content": "/markdown/minecraft/cmlinkedremote.md"},
-      "cmparallelpipes": {"name": "Create More: Parallel Pipes", "content": "/markdown/minecraft/cmparallelpipes.md"},
-      "cmpackagepipebombs": {"name": "Create More: Pipe Bombs in Packages", "content": "/markdown/minecraft/cmpackagepipebombs.md"},
-      "cmpackagecouriers": {"name": "Create More: Package Couriers", "content": "/markdown/minecraft/cmpackagecouriers.md"}
+      "cmlinkedremote": {"name": "Create More: Linked Remote", "content": "markdown/minecraft/cmlinkedremote.md"},
+      "cmparallelpipes": {"name": "Create More: Parallel Pipes", "content": "markdown/minecraft/cmparallelpipes.md"},
+      "cmpackagepipebombs": {"name": "Create More: Pipe Bombs in Packages", "content": "markdown/minecraft/cmpackagepipebombs.md"},
+      "cmpackagecouriers": {"name": "Create More: Package Couriers", "content": "markdown/minecraft/cmpackagecouriers.md"}
     }
   },
   "factorio": {
     "category": "Factorio",
     "subtext": "Mod Development",
-    "icon": "/icons/factorio_logo.png",
-    "content" : "/markdown/factorio/overview.md",
+    "icon": "icons/factorio_logo.png",
+    "content" : "markdown/factorio/overview.md",
     "projects": {
-      "spoilagescanner": {"name": "Spoilage Scanner", "content": "/markdown/factorio/spoilagescanner.md"},
-      "agrinospoil": {"name": "Agri No Spoil", "content": "/markdown/factorio/agrinospoil.md"},
-      "firestarter": {"name": "Fire Starter", "content": "/markdown/factorio/firestarter.md"},
-      "sestuff": {"name": "Space Exploration Stuff", "content": "/markdown/factorio/sestuff.md"},
-      "projectc": {"name": "Project C", "content": "/markdown/factorio/projectc.md"}
+      "spoilagescanner": {"name": "Spoilage Scanner", "content": "markdown/factorio/spoilagescanner.md"},
+      "agrinospoil": {"name": "Agri No Spoil", "content": "markdown/factorio/agrinospoil.md"},
+      "firestarter": {"name": "Fire Starter", "content": "markdown/factorio/firestarter.md"},
+      "sestuff": {"name": "Space Exploration Stuff", "content": "markdown/factorio/sestuff.md"},
+      "projectc": {"name": "Project C", "content": "markdown/factorio/projectc.md"}
     }
   },    
   "rimworld": {
     "category": "RimWorld",
     "subtext": "Mod Development",
-    "icon": "/icons/rimworld_logo.png",
-    "content" : "/markdown/rimworld/overview.md",
+    "icon": "icons/rimworld_logo.png",
+    "content" : "markdown/rimworld/overview.md",
     "projects": {
-      "tasks": {"name": "Tasks - General Automation Tool", "content": "/markdown/rimworld/tasks.md"},
-      "rimscript": {"name": "RimScript", "content": "/markdown/rimworld/rimscript.md"}
+      "tasks": {"name": "Tasks - General Automation Tool", "content": "markdown/rimworld/tasks.md"},
+      "rimscript": {"name": "RimScript", "content": "markdown/rimworld/rimscript.md"}
     }
   },    
   "unity": {
     "category": "Unity",
     "subtext": "Game Dev",
-    "icon": "/icons/unity_logo.png",
-    "content" : "/markdown/unity/overview.md",
+    "icon": "icons/unity_logo.png",
+    "content" : "markdown/unity/overview.md",
     "projects": {
-      "cmlinkedremote": {"name": "JARTS", "content": "/markdown/unity/jarts.md"}
+      "jarts": {"name": "JARTS", "content": "markdown/unity/jarts.md"}
     }
   },    
   "mechatronics": {
     "category": "Mechatronics",
     "subtext": "Logs & Designs",
-    "icon": "/icons/mechatronics_logo.png",
-    "content" : "/markdown/mechatronics/overview.md",
+    "icon": "icons/mechatronics_logo.png",
+    "content" : "markdown/mechatronics/overview.md",
     "projects": {
-      "bionichand": {"name": "Bionic Hand", "content": "/markdown/mechatronics/bionichand.md"},
-      "cflactuator": {"name": "Constant Force Linear Actuator", "content": "/markdown/mechatronics/cflactuator.md"}
+      "bionichand": {"name": "Bionic Hand", "content": "markdown/mechatronics/bionichand.md"},
+      "cflactuator": {"name": "Constant Force Linear Actuator", "content": "markdown/mechatronics/cflactuator.md"}
     }
   }
 }

@@ -18,10 +18,9 @@ function Projects ({skipAnimation = false}) {
   const [descriptionContent, setDescriptionContent] = useState("")
   const [ShowDescription, setShowDescription] = useState(false)
 
-
   useEffect(() => {
   if (!descriptionFile) return;
-  fetch(descriptionFile)
+  fetch(import.meta.env.BASE_URL + descriptionFile)
     .then((res) => res.text())
     .then((text) => setDescriptionContent(text));
   }, [descriptionFile]);
@@ -30,12 +29,14 @@ function Projects ({skipAnimation = false}) {
     if (paths[0] == "projects") {
       if (paths[1] && paths[1] in ProjectsCategories) {
           const projects = ProjectsCategories[paths[1]].projects
-        if (paths[2] && paths[2] in projects)
+        if (paths[2] && paths[2] in projects) {
           setDescriptionFile(projects[paths[2]].content)
-        else 
+        }
+        else {
           setDescriptionFile(ProjectsCategories[paths[1]].content)
+        }
       } else {
-        setDescriptionFile("/markdown/projects_intro.md")
+        setDescriptionFile("markdown/projects_intro.md")
       }
     }
 
@@ -104,7 +105,7 @@ const listItem = {
                 >
                   <Link to={"/projects/"+key} className="project-category-container">
                     <div className="project-category-image-container">
-                      <img src={p.icon} alt="" />
+                      <img src={import.meta.env.BASE_URL + p.icon} alt="" />
                     </div>
                     <div className="project-category-text">
                       <h2 className="project-category-name">{p.category}</h2>
@@ -152,7 +153,8 @@ const listItem = {
               />
             </svg>
 
-            {ShowDescription && (<div>
+            {ShowDescription && (<div style={{display: "flex", flex:1 }}>
+              {/* {console.log(descriptionContent)} */}
               <MotionMarkdown content={descriptionContent}/>
             </div>)}
           </motion.div>

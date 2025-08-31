@@ -7,7 +7,7 @@ function Header() {
   return(
     <div className="header">
       <button className="header-home-button" onClick={() => navigate("/")}>
-        <img className="header-logo" src="/logo_v2.png" alt="" />
+        <img className="header-logo" src={import.meta.env.BASE_URL + "logo_v2.png"} alt="" />
         <h2 className="header-text">Krei</h2>
       </button>
 

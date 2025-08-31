@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-irregular-whitespace */
-
 // Note: Icon standard, 256x256 and 8px empty space per side
 // Todo: redo icons
 // Todo: Use SVG graphics for logos
@@ -13,11 +10,10 @@ import "./App.css"
 import Header from "./Header.jsx"
 import Home from "./Home.jsx";
 import Projects from "./Projects.jsx";
-import { div } from "framer-motion/client";
 
 function App() {
   return(
-    <Router>
+    <Router basename="/portfolio-site">
       <Header/>
       <div className="content">
         <AnimatedRoutes/>
