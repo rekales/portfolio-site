@@ -71,15 +71,20 @@ const listItem = {
   return (
     <div className="projects-content">
       <div className="projects-list-container">
-        <motion.h1 
-        className="projects-header"
+        <motion.div
         initial={skipAnimation ? false : { x: "-100%", opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         exit={{ x: "-100%", opacity: 0 }}
         transition={{ duration: 0.2 }}
+        style={{display:"flex"}}
         >
-          Projects
-        </motion.h1>
+          <Link className="projects-back" to="/">
+            &lt;
+          </Link>
+          <h1 className="projects-header">
+            Projects
+          </h1>
+        </motion.div>
 
         <div className="project-categories-container">
           <motion.ul

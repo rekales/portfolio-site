@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useNavigate } from "react-router-dom";
 import "./Header.css"
 
@@ -15,7 +14,7 @@ function Header() {
       <div className="header-links">
         <a className="header-link-container" href="https://github.com/rekales">
           <svg width="48" height="48" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" 
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="12" 
             d="M120.755 170c.03-4.669.059-20.874.059-27.29 0-9.272-3.167-15.339-6.719-18.41 22.051-2.464 45.201-10.863 
             45.201-49.067 0-10.855-3.824-19.735-10.175-26.683 1.017-2.516 4.413-12.63-.987-26.32 0 0-8.296-2.672-27.202 
             10.204-7.912-2.213-16.371-3.308-24.784-3.352-8.414.044-16.872 1.14-24.785 3.352C52.457 19.558 44.162 22.23 
@@ -28,7 +27,7 @@ function Header() {
 
         <a className="header-link-container">
           <svg width="48" height="48" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" 
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="12" 
             d="m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 
             19.369-73.528 1.863-3.334 4.967-5.778 8.567-7.056C58.186 43.02 64.016 40.664 74 39l6 11s6-2 16-2 16 2 16 2l6-11c9.984 
             1.664 15.814 4.02 24.402 7.068 3.6 1.278 6.704 3.722 8.567 7.056 14.235 25.472 19.857 49.564 19.37 73.528-.095 4.668-2.467 
@@ -41,7 +40,7 @@ function Header() {
 
         <a className="header-link-container" href="https://ko-fi.com/krei_">
           <svg width="48" height="48" viewBox="0 0 50.8 50.8" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke="currentColor">
+            <g fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" stroke="currentColor">
               <path d="M4.5 10.853h28.295v19.225a9.07 9.07 0 0 1-9.07 9.07H13.57a9.07 9.07 0 0 1-9.07-9.07z"/>
               <path d="m12.197 26.95 6.45 6.45 6.45-6.45a8.2 8.2 0 0 0 2.402-5.799h0a4.51 4.51 0 0 0-4.212-4.546 
               4.426 4.426 0 0 0-4.64 4.421 4.426 4.426 0 0 0-4.64-4.42 4.51 4.51 0 0 0-4.212 4.545h0a8.2 8.2 0 0 0 2.402 

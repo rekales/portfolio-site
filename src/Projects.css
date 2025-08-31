@@ -48,12 +48,26 @@ svg.bottom-right {
     overflow: scroll;
 }
 
+.projects-back {
+    margin: 0px;
+    font-size: 2.4em;
+    font-weight: 500;
+    line-height: 1.0;
+    padding-left: 32px;
+    padding-top: 8px;
+    min-width: 64px;
+    opacity: 0.6;
+    transition: 0.15s all;
+}
+
+.projects-back:hover {
+    opacity: 1;
+}
+
 .projects-header {
     margin: 0px;
     font-size: 64;
     font-weight: 500;
-    padding-left: 96px;
-
 }
 
 .project-categories-container {
