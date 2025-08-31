@@ -31,7 +31,7 @@
     "content" : "/markdown/rimworld/overview.md",
     "projects": {
       "tasks": {"name": "Tasks - General Automation Tool", "content": "/markdown/rimworld/tasks.md"},
-      "rimscript": {"name": "RimScript", "content": "/markdown/riwmorld/rimscript.md"}
+      "rimscript": {"name": "RimScript", "content": "/markdown/rimworld/rimscript.md"}
     }
   },    
   "unity": {

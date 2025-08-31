@@ -5,3 +5,12 @@ Most, if not all, of the most I make are add-ons for the popular Create mod. I a
 I work with Java and the NeoForge modding API to make my mods and sometimes use Forge when back-porting to earlier version.
 
 You have no clue how hard it is to work around the Minecraft codebase AND the Create codebase combined.
+
+<div style="display:flex; gap: 32px; margin-top: 32px">
+    <div>
+        <CurseForgeDownloadCount/>
+    </div>
+    <div>
+        <ModrinthDownloadCount/>
+    </div>
+</div>

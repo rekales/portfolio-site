@@ -13,7 +13,7 @@ function Header() {
       </button>
 
       <div className="header-links">
-        <button className="header-link-container">
+        <a className="header-link-container" href="https://github.com/rekales">
           <svg width="48" height="48" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" 
             d="M120.755 170c.03-4.669.059-20.874.059-27.29 0-9.272-3.167-15.339-6.719-18.41 22.051-2.464 45.201-10.863 
@@ -24,9 +24,9 @@ function Header() {
             8.834 15.199 23.178 10.803 28.815 8.265"/>
           </svg>
           <h4 className="header-link-text">Github</h4>
-        </button>
+        </a>
 
-        <button className="header-link-container">
+        <a className="header-link-container">
           <svg width="48" height="48" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="12" 
             d="m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 
@@ -37,9 +37,9 @@ function Header() {
             <ellipse cx="121" cy="101" fill="currentColor" rx="13" ry="15"/>
           </svg>
           <h4 className="header-link-text">Discord</h4>
-        </button>
+        </a>
 
-        <button className="header-link-container">
+        <a className="header-link-container" href="https://ko-fi.com/krei_">
           <svg width="48" height="48" viewBox="0 0 50.8 50.8" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" stroke="currentColor">
               <path d="M4.5 10.853h28.295v19.225a9.07 9.07 0 0 1-9.07 9.07H13.57a9.07 9.07 0 0 1-9.07-9.07z"/>
@@ -49,7 +49,7 @@ function Header() {
             </g>
           </svg>
           <h4 className="header-link-text">Ko-fi</h4>
-        </button>
+        </a>
       </div>
     </div>
   );

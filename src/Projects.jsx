@@ -1,24 +1,23 @@
 /* eslint-disable no-unused-vars */
 import PropTypes from "prop-types";
-import {motion} from "framer-motion";
-import { div, li, ul } from "framer-motion/client";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
 
 import "./Projects.css"
-import "./ProjectsMarkdown.css"
 import ProjectsCategories from "./assets/project_categories.json"
+
+import MotionMarkdown from "./modules/motion-markdown/MotionMarkdown";
 
 function Projects ({skipAnimation = false}) {
 
   const location = useLocation();
   const paths = location.pathname.split("/").filter(Boolean);
 
-  const [descriptionFile, setDescriptionFile] = useState("/markdown/projects_intro.md")
+  const [descriptionFile, setDescriptionFile] = useState("")
   const [descriptionContent, setDescriptionContent] = useState("")
+  const [ShowDescription, setShowDescription] = useState(false)
+
 
   useEffect(() => {
   if (!descriptionFile) return;
@@ -49,23 +48,55 @@ function Projects ({skipAnimation = false}) {
     }
   }, [paths])
 
+const list = {
+  hidden: {
+    opacity: 0,
+    x: "-100%"
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      staggerChildren: 0.1,
+    }
+  }
+};
+
+const listItem = {
+  hidden: { opacity: 0, x: "-100%" },
+  show: { opacity: 1, x: 0 },
+  exit: { opacity: 0, x: "-100%" },
+};
+
   return (
     <div className="projects-content">
-      <motion.div
-      className="projects-name-container"
-      initial={skipAnimation ? false : { x: "-100%", opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      exit={{ x: "-100%", opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      >
-        <h1 className="projects-header">Projects</h1>
+      <div className="projects-list-container">
+        <motion.h1 
+        className="projects-header"
+        initial={skipAnimation ? false : { x: "-100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: "-100%", opacity: 0 }}
+        transition={{ duration: 0.2 }}
+        >
+          Projects
+        </motion.h1>
 
-        <div className="project-category-list-container">
-          <ul className="project-category-list">
+        <div className="project-categories-container">
+          <motion.ul
+          className="project-categories"
+          variants={list}
+          initial={skipAnimation ? "show" : "hidden"}
+          animate="show" 
+          exit="exit"
+          style={{ listStyle: "none", padding: 0 }}
+          >
             {Object.entries(ProjectsCategories).map(([key, p], index) => {
               return (
-                <li key={index} data-key={key}>
-
+                <motion.li
+                key={index} 
+                data-key={key}
+                variants={listItem}
+                >
                   <Link to={"/projects/"+key} className="project-category-container">
                     <div className="project-category-image-container">
                       <img src={p.icon} alt="" />
@@ -90,28 +121,36 @@ function Projects ({skipAnimation = false}) {
                     })}
                   </motion.ul>
 
-                </li>
+                </motion.li>
               );
             })}
-          </ul>
+          </motion.ul>
         </div>
-      </motion.div>
+      </div>
+
       <div className="projects-description-container">
-          <div className="projects-description-box">
-              <svg className="top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <path style={{stroke:"#ffffff",strokeWidth:6,strokeLinecap:"square"}}
-                  d="M0 100V0m0 0h100"
-                />
-              </svg>
-              <svg className="bottom-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                <path style={{stroke:"#ffffff",strokeWidth:6,strokeLinecap:"square"}}
-                  d="M0 100h100m0 0V0"
-                />
-              </svg>
-              <div className="projects-description-markdown-container">
-                <ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>{descriptionContent}</ReactMarkdown>
-              </div>
-          </div>
+          <motion.div className="projects-description-box"
+          initial={{ opacity: 0, scaleX: 0.25, scaleY: 0}}
+          animate={{ opacity: 1, scaleX: 1, scaleY: 1}}
+          exit={{ opacity: 0 , scaleX: 0.25, scaleY: 0, transition: {when: "afterChildren",staggerChildren: 0.2}}}
+          onAnimationComplete={() => setShowDescription(true)}
+          transition={{ duration: 0.3 }}
+          >
+            <svg className="top-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <path style={{stroke:"#ffffff",strokeWidth:6,strokeLinecap:"square"}}
+                d="M0 100V0m0 0h100"
+              />
+            </svg>
+            <svg className="bottom-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+              <path style={{stroke:"#ffffff",strokeWidth:6,strokeLinecap:"square"}}
+                d="M0 100h100m0 0V0"
+              />
+            </svg>
+
+            {ShowDescription && (<div>
+              <MotionMarkdown content={descriptionContent}/>
+            </div>)}
+          </motion.div>
       </div>
     </div>
   );

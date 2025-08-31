@@ -1,0 +1,25 @@
+.download-count-container {
+    border: solid #ffffff66 1px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+}
+
+p.download-count-header {
+    font-size: 16px;
+    color: #ffffffdd;
+    margin: 0px;
+    margin-bottom: auto;
+}
+
+p.download-count-number {
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin: 0px;
+    margin-top: auto;
+    margin-bottom: 8px;
+}
