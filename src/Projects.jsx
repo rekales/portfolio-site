@@ -153,7 +153,7 @@ const listItem = {
               />
             </svg>
 
-            {ShowDescription && (<div style={{display: "flex", flex:1 }}>
+            {ShowDescription && (<div style={{display: "flex", flex:1}}>
               {/* {console.log(descriptionContent)} */}
               <MotionMarkdown content={descriptionContent}/>
             </div>)}

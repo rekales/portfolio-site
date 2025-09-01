@@ -13,7 +13,7 @@ import Projects from "./Projects.jsx";
 
 function App() {
   return(
-    <Router basename="/portfolio-site">
+    <Router basename={import.meta.env.BASE_URL}>
       <Header/>
       <div className="content">
         <AnimatedRoutes/>
