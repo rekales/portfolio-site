@@ -48,6 +48,49 @@
     line-height: 1.2;
 }
 
+.github-statistic-container {
+    position: absolute;
+    right: 48px;
+    bottom: 48px;
+    text-align: right;
+
+    width: 360px;
+}
+
+.github-statistic-container > h2 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0px;
+}
+
+.github-statistic-container > p {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0px;
+    line-height: 1.15;
+    text-overflow: start hidden;
+}
+
+.github-statistic-tooltip {
+    position: absolute;
+    bottom: 100%;
+    right: 0%;
+
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0px;
+    line-height: 1.15;
+    text-align: center;
+
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.github-statistic-container > h2:hover .github-statistic-tooltip {
+    opacity: 1;
+}
+
 
 .jumper1 {
     animation: jump1 5s 2;

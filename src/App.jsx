@@ -3,8 +3,8 @@
 // Todo: Use SVG graphics for logos
 
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import "./App.css"
 
 import Header from "./Header.jsx"
@@ -39,6 +39,7 @@ function AnimatedRoutes() {
       <Routes location={location} key={topLevelKey}>
         <Route path="/" element={<Home/>}/>
         <Route path="/projects/*" element={<Projects skipAnimation={isFirstLoad}/>}/>
+        <Route path="/portfolio" element={<Navigate to="/" replace />} />
       </Routes>
     </AnimatePresence>
   )

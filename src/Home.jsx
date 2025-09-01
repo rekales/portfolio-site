@@ -9,10 +9,29 @@ function Home() {
 
   const [showName, setShowName] = useState(true);
 
+  const formatter = new Intl.NumberFormat("en", {
+      notation: "compact",
+      maximumFractionDigits: 2
+  });
+
+  function daysUntil(lastDate) {
+    const last = new Date(lastDate);
+    const target = new Date();
+    const diffMs = target - last;
+    return Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+  }
+
+  const newCommitsEstimate = Math.trunc(daysUntil("2025-8-30")*0.7);
+  const commitEstimate = 421 + newCommitsEstimate;
+  const linesEstimate = 37289 + newCommitsEstimate * 48;
+
   const initial = {
     borderRightWidth: "4px",
+    borderLeftWidth: "4px",
     borderRightStyle: "solid",
     borderRightColor: 
+    "rgba(255,255,255,0)",
+    borderLeftColor: 
     "rgba(255,255,255,0)",
     maxWidth: 0,
   }
@@ -35,6 +54,16 @@ function Home() {
     "rgba(255,255,255,0)"
     ],
     maxWidth: ["0px", "0px", "300px", "300px"],
+  }
+
+    const animateStatistics = {
+    borderLeftColor: [
+    "rgba(255,255,255,0)", 
+    "rgba(255,255,255,1)", 
+    "rgba(255,255,255,1)", 
+    "rgba(255,255,255,0)"
+    ],
+    maxWidth: ["0px", "0px", "360px", "360px"],
   }
 
   const exit = {
@@ -96,11 +125,25 @@ function Home() {
         </motion.button>}
       </AnimatePresence>
 
-      <AnimatePresence>
-        
-      </AnimatePresence>
 
-
+      {<motion.div className="github-statistic-container"
+      initial={initial}
+      animate={animateName}
+      transition={transition}
+      exit={{opacity: 0, y: "100%", transition: {duration: 0.15, ease: "linear"}}}
+      key={"statistics"}
+      style={{overflow: "hidden", whiteSpace: "nowrap"}}
+      >
+        <h2>
+          Github Statistics*
+          <span className="github-statistic-tooltip">
+            *private repository stats included
+          </span>
+        </h2>
+        <p>{commitEstimate}&nbsp; Lifetime Commits</p>
+        <p>{formatter.format(linesEstimate)}&nbsp; Lines of Code Comitted</p>
+        <p>{23}&nbsp; Issues Resolved</p>
+      </motion.div>}
     </div>
   );
 }

@@ -1,8 +1,19 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+
 import "./Header.css"
 
 function Header() {
   const navigate = useNavigate();
+
+  const [showToast, setShowToast] = useState(false);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText("rekales");
+    setShowToast(true);
+    setTimeout(() => setShowToast(false), 2000);
+  };
 
   return(
     <div className="header">
@@ -25,7 +36,7 @@ function Header() {
           <h4 className="header-link-text">Github</h4>
         </a>
 
-        <a className="header-link-container">
+        <button className="header-link-container" onClick={handleCopy}>
           <svg width="48" height="48" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="12" 
             d="m68 138-8 16c-10.19-4.246-20.742-8.492-31.96-15.8-3.912-2.549-6.284-6.88-6.378-11.548-.488-23.964 5.134-48.056 
@@ -36,7 +47,7 @@ function Header() {
             <ellipse cx="121" cy="101" fill="currentColor" rx="13" ry="15"/>
           </svg>
           <h4 className="header-link-text">Discord</h4>
-        </a>
+        </button>
 
         <a className="header-link-container" href="https://ko-fi.com/krei_">
           <svg width="48" height="48" viewBox="0 0 50.8 50.8" xmlns="http://www.w3.org/2000/svg">
@@ -50,6 +61,19 @@ function Header() {
           <h4 className="header-link-text">Ko-fi</h4>
         </a>
       </div>
+
+
+      <AnimatePresence>
+        {showToast && <motion.div className="toast-notif"
+        initial={{ opacity: 0, x: "100%" }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: 0, transition: { duration: 0.4 }}}
+        transition={{ duration: 0.2 }}
+        >
+          <p>Copied username: "rekales" to clipboard</p>
+        </motion.div>}
+      </AnimatePresence>
+
     </div>
   );
 }
