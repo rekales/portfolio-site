@@ -75,7 +75,7 @@ function Home() {
   }
 
   const transition = {
-    duration: 10.4,
+    duration: 0.4,
     times: [0, 0.15, 0.85, 1],
     ease: "linear",
   }
