@@ -8,4 +8,4 @@
 
 A simple mod for a quick gag. The title says it all.
 
-
+![](/gifs/package-pipebomb-preview.gif)
